@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
 <style>
 :root{--bg:#f4f8f4;--surface:#fff;--fg:#0c2a1b;--muted:#4a6355;--line:#cfe0d6;--green:#0b4a26;--green-2:#1a7a42;--accent:#f2d21b;--on-green:#f0faf5;--sky:#e0f0e8;--card:#fff;--shadow:rgba(11,74,38,.14);--shadow-lg:rgba(11,74,38,.22);--radius:14px;--display:'Archivo','Arial Black',Arial,sans-serif;--body:'Newsreader',Georgia,'Times New Roman',serif;color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080e1a;--surface:#0f172a;--fg:#f1f5f9;--muted:#94a3b8;--line:#1e293b;--green:#3b82f6;--green-2:#60a5fa;--accent:#fbbf24;--on-green:#ffffff;--sky:#132240;--card:#111d35;--shadow:rgba(0,0,0,.5);--shadow-lg:rgba(0,0,0,.7);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#080e1a;--surface:#0f172a;--fg:#f1f5f9;--muted:#94a3b8;--line:#1e293b;--green:#3b82f6;--green-2:#60a5fa;--accent:#fbbf24;--on-green:#ffffff;--sky:#132240;--card:#111d35;--shadow:rgba(0,0,0,.5);--shadow-lg:rgba(0,0,0,.7);color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:18px;line-height:1.6}
@@ -28,16 +26,12 @@ section{padding-block:clamp(56px,9vw,120px)}
 .sectionhead{display:grid;gap:12px;margin-bottom:40px}
 /* HEADER */
 header.top{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);background:rgba(244,248,244,.9);border-bottom:1px solid var(--line);transition:background .3s}
-:root[data-theme="dark"] header.top{background:rgba(8,14,26,.92)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) header.top{background:rgba(8,14,26,.92)}}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:10px 20px;padding-block:13px;flex-wrap:wrap}
 .brand{font-family:var(--display);font-weight:900;letter-spacing:.03em;text-decoration:none;color:var(--green);display:flex;align-items:center;gap:10px;font-size:1rem}
 .vote-badge{border:2.5px solid var(--green);padding:2px 9px;font-size:.88rem;line-height:1.2;letter-spacing:.06em}
 nav{display:flex;gap:4px 16px;flex-wrap:wrap;align-items:center}
 nav a{font-family:var(--display);font-weight:700;font-size:.84rem;text-decoration:none;color:var(--muted);padding:7px 2px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 nav a:hover{color:var(--green);border-color:var(--accent)}
-.themebtn{font:700 .75rem/1 var(--display);letter-spacing:.08em;text-transform:uppercase;border:2px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:7px 14px;cursor:pointer;transition:border-color .2s,background .2s}
-.themebtn:hover{border-color:var(--green);background:var(--sky)}
 /* HERO */
 .hero-wrap{padding-block:clamp(40px,6vw,80px) 0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(11,74,38,.06) 0%,transparent 70%),radial-gradient(ellipse 50% 80% at 10% 80%,rgba(242,210,27,.08) 0%,transparent 60%)}
 .hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(30px,5vw,80px);align-items:center}
@@ -118,7 +112,7 @@ nav a:hover{color:var(--green);border-color:var(--accent)}
 .form-group{display:grid;gap:6px}
 .form-group label{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
 .form-control{width:100%;padding:12px 16px;font-family:var(--body);font-size:1.05rem;background:var(--bg);color:var(--fg);border:1.5px solid var(--line);border-radius:8px;transition:border-color .2s,box-shadow .2s}
-.form-control:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(59,130,246,.25)}
+.form-control:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(11,74,38,.2)}
 textarea.form-control{resize:vertical;min-height:100px}
 .ask-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
 .ask-info-panel{display:grid;gap:20px}
@@ -128,24 +122,6 @@ textarea.form-control{resize:vertical;min-height:100px}
 .summary-btns{display:flex;flex-direction:column;gap:10px}
 .badge-count{display:inline-flex;align-items:center;gap:6px;font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--surface);color:var(--green);border:1px solid var(--line);margin-bottom:12px}
 .form-status{font-family:var(--display);font-weight:700;font-size:.88rem;color:var(--green-2);min-height:1.5em;transition:opacity .3s}
-/* DARK BLUE THEME OVERRIDES */
-:root[data-theme="dark"] .plan-section,
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .plan-section{background:#0e172a;color:var(--fg);border-block:1px solid var(--line)}}
-:root[data-theme="dark"] .plan-section h2,
-:root[data-theme="dark"] .plan-section h2 em,
-:root[data-theme="dark"] .plan-section .step h3,
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .plan-section h2,:root:not([data-theme="light"]) .plan-section h2 em,:root:not([data-theme="light"]) .plan-section .step h3{color:var(--green)}}
-:root[data-theme="dark"] .plan-section .lede,
-:root[data-theme="dark"] .plan-section .step p,
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .plan-section .lede,:root:not([data-theme="light"]) .plan-section .step p{color:var(--muted);opacity:1}}
-:root[data-theme="dark"] .tapewrap,
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .tapewrap{background:#1d4ed8;color:#ffffff}}
-:root[data-theme="dark"] .caption-bar,
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .caption-bar{background:#1d4ed8;color:#ffffff}}
-:root[data-theme="dark"] .hero-wrap,
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero-wrap{background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(59,130,246,.12) 0%,transparent 70%),radial-gradient(ellipse 50% 80% at 10% 80%,rgba(251,191,36,.08) 0%,transparent 60%)}}
-:root[data-theme="dark"] .hero-frame::before,
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero-frame::before{background:var(--green);opacity:.25;box-shadow:0 0 50px rgba(59,130,246,.25)}}
 /* CONNECT */
 .connect-section{background:var(--sky)}
 .connect-section h2{font-size:clamp(2.2rem,6.5vw,4.8rem)}
@@ -182,7 +158,6 @@ footer a:hover{opacity:.7}
       <a href="#ask">Ask Ghalib</a>
       <a href="#connect">Connect</a>
     </nav>
-    <button class="themebtn" id="theme-toggle" type="button" aria-label="Switch colour theme">Theme</button>
   </div>
 </header>
 
@@ -386,18 +361,8 @@ footer a:hover{opacity:.7}
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
 (function(){
-  var root = document.documentElement, themeBtn = document.getElementById('theme-toggle');
-  try {
-    var s = localStorage.getItem('gh-theme');
-    if (s) root.setAttribute('data-theme', s);
-  } catch(e){}
-
-  themeBtn.addEventListener('click', function(){
-    var isDark = root.getAttribute('data-theme') === 'dark' || (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
-    var next = isDark ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('gh-theme', next); } catch(e){}
-  });
+  try { localStorage.removeItem('gh-theme'); } catch(e){}
+  document.documentElement.removeAttribute('data-theme');
 
   var toast = document.getElementById('toast'), shareBtn = document.getElementById('share-btn');
   function showToast(m){
